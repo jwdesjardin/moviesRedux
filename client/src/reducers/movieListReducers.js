@@ -2,7 +2,7 @@ import {
 	FETCH_MOVIE_LIST_FAIL,
 	FETCH_MOVIE_LIST_LOADING,
 	FETCH_MOVIE_LIST_SUCCESS,
-} from './actions';
+} from '../actions/constants';
 
 const initialState = {
 	data: [],

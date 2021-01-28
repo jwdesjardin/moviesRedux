@@ -2,10 +2,10 @@ import {
 	FETCH_MOVIE_DATA_SUCCESS,
 	FETCH_MOVIE_DATA_LOADING,
 	FETCH_MOVIE_DATA_FAIL,
-} from './actions';
+} from '../actions/constants';
 
 const initialState = {
-	data: {},
+	data: null,
 	loading: false,
 	error: null,
 };

@@ -6,13 +6,17 @@ import {
 } from './constants';
 import axios from 'axios';
 
+const { REACT_APP_API_KEY } = process.env;
+
 export function getMoviesList(query) {
 	return async function(dispatch) {
 		try {
-			const { data } = await axios.get(`http://omdbapi.com/?apikey=f68a57c6&s=${query}`);
+			const { data } = await axios.get(
+				`http://omdbapi.com/?apikey=${REACT_APP_API_KEY}&s=${query}`
+			);
 			return dispatch({
 				type: FETCH_MOVIE_LIST_SUCCESS,
-				payload: data,
+				payload: data.Search,
 			});
 		} catch (error) {
 			return dispatch({
@@ -23,10 +27,12 @@ export function getMoviesList(query) {
 	};
 }
 
-export function getMoviesData(movieID) {
+export function getMovieData(movieID) {
 	return async function(dispatch) {
 		try {
-			const { data } = await axios.get(`http://omdbapi.com/?apikey=f68a57c6&i=${movieID}`);
+			const { data } = await axios.get(
+				`http://omdbapi.com/?apikey=${REACT_APP_API_KEY}&i=${movieID}`
+			);
 			return dispatch({
 				type: FETCH_MOVIE_DATA_SUCCESS,
 				payload: data,
