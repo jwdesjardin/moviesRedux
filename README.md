@@ -16,11 +16,10 @@ The app state will consist of two main actions:
 ## WORKFLOW
 
 1. create app
-3. create actions
-2. create reducers
-4. create store
-5. write integration tests
-6. create react stateful components to search and display movies
-7. fire action in component
-8. refactor with hooks
+1. create react stateful components to search and display movies
+1. create reducers
+1. create store
+1. create actions
+1. fire action in component
+1. refactor with hooks
    
