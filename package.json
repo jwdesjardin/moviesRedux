@@ -1,0 +1,11 @@
+{
+  "name": "moviesredux",
+  "version": "1.0.0",
+  "description": "This project is going to use redux to manage app state.\r The app state will consist of two main actions:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
